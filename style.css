@@ -263,7 +263,18 @@ img { display: block; max-width: 100%; }
 .ring:not(.ring-ready) .ring-card { display: none; }
 .ring:not(.ring-ready) .ring-card:first-child { display: block; }
 .ring:not(.ring-ready) .ring-card:first-child::after { opacity: 0; }
-.ring-caption { text-align: center; margin-top: clamp(20px, 3.5vh, 36px); min-height: 64px; }
+.ring-caption {
+  text-align: center;
+  margin-top: clamp(64px, 10vh, 110px);   /* clear of the front card's 3D overflow */
+  min-height: 64px;
+  position: relative;
+  z-index: 2;                              /* paints above the 3D stage */
+}
+.ring-caption.swap { animation: capswap 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+@keyframes capswap {
+  from { transform: translateY(12px); opacity: 0.2; }
+  to { transform: none; opacity: 1; }
+}
 .ring-caption h3 {
   font-size: clamp(1.5rem, 3.2vw, 2.4rem);
   font-weight: 900;

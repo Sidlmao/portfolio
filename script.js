@@ -52,6 +52,10 @@
     cards.forEach(function (c, i) { c.classList.toggle('is-active', i === idx); });
     ringTitle.textContent = cards[idx].getAttribute('data-title');
     ringLine.textContent = (cards[idx].getAttribute('data-line') || '').toUpperCase();
+    var cap = ringTitle.parentElement;
+    cap.classList.remove('swap');
+    void cap.offsetWidth;                  // restart the swap animation
+    cap.classList.add('swap');
   }
 
   layoutRing();
