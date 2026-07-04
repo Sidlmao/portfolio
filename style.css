@@ -70,9 +70,7 @@ img { display: block; max-width: 100%; }
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(10, 10, 13, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(10, 10, 13, 0.94);
   border-bottom-color: var(--line);
 }
 .nav-logo {
@@ -161,7 +159,6 @@ img { display: block; max-width: 100%; }
   z-index: 2;
   pointer-events: none;
   will-change: transform;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
 }
 .hero-cutout img { width: 100%; height: auto; }
 .hero-inner { position: relative; }
@@ -236,19 +233,28 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--line);
   background: var(--bg-2);
   backface-visibility: hidden;
-  transition: filter 0.3s ease;
 }
 .ring-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.ring-card.is-active { filter: brightness(1); }
-.ring-card:not(.is-active) { filter: brightness(0.45) saturate(0.8); }
+/* Dim via a cheap opacity overlay instead of per-frame filters */
+.ring-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #07070a;
+  opacity: 0.6;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.ring-card.is-active::after { opacity: 0; }
 
 /* Before JS lays out the 3D ring (or with JS off): show one composed card */
 .ring:not(.ring-ready) .ring-card { display: none; }
-.ring:not(.ring-ready) .ring-card:first-child { display: block; filter: none; }
+.ring:not(.ring-ready) .ring-card:first-child { display: block; }
+.ring:not(.ring-ready) .ring-card:first-child::after { opacity: 0; }
 .ring-caption { text-align: center; margin-top: clamp(20px, 3.5vh, 36px); min-height: 64px; }
 .ring-caption h3 {
   font-size: clamp(1.5rem, 3.2vw, 2.4rem);

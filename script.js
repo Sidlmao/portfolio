@@ -87,7 +87,7 @@
   // ---------- Smooth scroll (Lenis bridged to GSAP ticker) ----------
   var lenis = null;
   if (typeof window.Lenis !== 'undefined') {
-    lenis = new Lenis({ autoRaf: false, lerp: 0.11 });
+    lenis = new Lenis({ autoRaf: false, lerp: 0.14 });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
     gsap.ticker.lagSmoothing(0);
