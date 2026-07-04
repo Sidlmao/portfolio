@@ -110,20 +110,45 @@
     }
   }
 
-  // ---------- 3D ring: pinned, scroll spins it twice ----------
+  // ---------- 3D ring: drag to spin (with momentum), slow idle drift ----------
   if (cards.length) {
-    var spin = { deg: 0 };
-    gsap.to(spin, {
-      deg: -720,
-      ease: 'none',
-      scrollTrigger: { trigger: '.gallery-pin', start: 'top top', end: '+=250%', pin: true, scrub: 0.5, anticipatePin: 1 },
-      onUpdate: function () {
-        ring.style.transform = 'rotateX(-6deg) rotateY(' + spin.deg + 'deg)';
-        var idx = Math.round(-spin.deg / STEP) % cards.length;
-        setActive(idx < 0 ? idx + cards.length : idx);
-      }
+    var stage = document.querySelector('.ring-stage');
+    var deg = 0, vel = 0, dragging = false, lastX = 0;
+    var snap = gsap.utils.snap(STEP);
+
+    function render() {
+      ring.style.transform = 'rotateX(-6deg) rotateY(' + deg + 'deg)';
+      var idx = Math.round(-deg / STEP) % cards.length;
+      setActive(idx < 0 ? idx + cards.length : idx);
+    }
+
+    stage.addEventListener('pointerdown', function (e) {
+      dragging = true; vel = 0; lastX = e.clientX;
+      stage.setPointerCapture(e.pointerId);
     });
-    ring.style.transform = 'rotateX(-6deg)';
+    stage.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - lastX;
+      lastX = e.clientX;
+      deg += dx * 0.35;
+      vel = dx * 0.35;
+      render();
+    });
+    ['pointerup', 'pointercancel'].forEach(function (ev) {
+      stage.addEventListener(ev, function () { dragging = false; });
+    });
+
+    gsap.ticker.add(function () {
+      if (dragging) return;
+      if (Math.abs(vel) > 0.05) {
+        deg += vel; vel *= 0.95;               // momentum
+        if (Math.abs(vel) <= 0.05) deg = snap(deg); // settle on a card
+      } else {
+        deg -= 0.04;                            // gentle idle drift
+      }
+      render();
+    });
+    render();
   }
 
   // ---------- Section reveals: one IntersectionObserver, CSS does the rest ----------

@@ -219,7 +219,13 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: grab;
+  touch-action: pan-y;       /* horizontal drag spins, vertical still scrolls */
+  user-select: none;
+  -webkit-user-select: none;
 }
+.ring-stage:active { cursor: grabbing; }
+.ring-card img { pointer-events: none; }
 .ring {
   position: relative;
   width: clamp(190px, 22vw, 300px);
