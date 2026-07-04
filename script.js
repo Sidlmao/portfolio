@@ -173,15 +173,13 @@
         end: '+=250%',
         pin: true,
         scrub: 0.5,
-        anticipatePin: 1,
-        onUpdate: function () {
-          var idx = Math.round(-spin.deg / STEP) % cards.length;
-          if (idx < 0) idx += cards.length;
-          setActive(idx);
-        }
+        anticipatePin: 1
       },
       onUpdate: function () {
         gsap.set(ring, { rotationY: spin.deg, rotationX: -6 });
+        var idx = Math.round(-spin.deg / STEP) % cards.length;
+        if (idx < 0) idx += cards.length;
+        setActive(idx);
       }
     });
     gsap.set(ring, { rotationX: -6 });
