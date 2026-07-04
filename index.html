@@ -3,367 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sidharth Gadikota | Developer, Designer, Innovator, Entrepreneur">
-  <meta name="keywords" content="Sidharth, Gadikota, Developer, Portfolio, Computer Science, Entrepreneur">
+  <meta name="description" content="Sidharth Gadikota. AI developer and builder from Parsippany, NJ. Northeastern CS & Business, class of 2030.">
   <meta name="author" content="Sidharth Gadikota">
-  <title>Sidharth Gadikota | Portfolio</title>
+  <title>Sidharth Gadikota</title>
 
-  <!-- Main CSS -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sidharth Gadikota">
+  <meta property="og:description" content="AI developer and builder from Parsippany, NJ.">
+  <meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_185941_0a641d86-6904-4eb5-8682-649d49ae80bf.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/webp" href="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_185442_b9bd0794-9337-4269-9e99-272d02273038_min.webp">
+  <link rel="apple-touch-icon" href="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_185442_b9bd0794-9337-4269-9e99-272d02273038_min.webp">
+
+  <!-- Fonts: Satoshi (display) + JetBrains Mono (stats/labels) -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- Main JS (deferred for better load) -->
+  <!-- Motion: Lenis + GSAP -->
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <div class="logo">Sidharth</div>
-      <div class="nav-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#top" aria-label="Home">S<span>G</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#record">Record</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container hero-content">
-      <h1>Hi, I'm Sidharth <span id="typed-text"></span></h1>
-      <p>A passionate Developer, Designer, Innovator, and Entrepreneur.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-      
-    </div>
-    <div class="hero-bg"></div>
-    <div class="hero-particles"></div>
-  </section>
+  <main id="top">
 
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>About Me</h2>
-      
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-plate" aria-hidden="true">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_185439_93037c18-d6c4-4a2c-ac16-021c17830d12_min.webp" alt="" fetchpriority="high">
+        <div class="hero-shade"></div>
       </div>
-      <div class="about-content">
-        <div class="about-img">
-          <img src="pfp.jpeg?text=Sidharth+Gadikota" alt="Sidharth Gadikota">
+
+      <div class="hero-inner">
+        <h1 class="hero-name" aria-label="Sidharth Gadikota">
+          <span class="line"><span class="chars">SIDHARTH</span></span>
+          <span class="line line-2"><span class="chars">GADIKOTA</span></span>
+        </h1>
+        <div class="hero-front">
+          <p class="hero-sub">I build AI products, from healthcare agents to RAG pipelines. Northeastern CS &amp; Business, class of 2030.</p>
+          <a class="cta-inline" href="#gallery">
+            <span>View work</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div class="about-info">
-          <h3>Who I Am</h3>
-          <p>Sid is a Computer Science student at Morris County School of Technology with a strong passion for coding, mathematics, and technology. He excels academically, codes in his free time, and actively participates in varsity basketball and school organizations. Sid would like to attend Georgia Tech to study Computer Science, aiming to expand his technical skills and pursue a career in the tech industry. His drive, focus, and hands-on experience position him for future success.
+      </div>
 
-</p>
-          <ul class="info-list">
-            <li class="info-item"><i class="fas fa-birthday-cake"></i> 2008</li>
-            <li class="info-item"><i class="fas fa-map-marker-alt"></i> Parsippany, NJ</li>
-            <li class="info-item"><i class="fas fa-envelope"></i> Siddgadikota@gmail.com</li>
-            <li class="info-item"><i class="fas fa-phone"></i> 862-220-3004</li>
+      <div class="hero-cutout" id="heroCutout" aria-hidden="true">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192151_c528c132-59e3-4f61-8a67-95307524bfd9_min.png" alt="" fetchpriority="high">
+      </div>
+
+      <p class="hero-meta mono">PARSIPPANY, NJ&nbsp;&nbsp;/&nbsp;&nbsp;NORTHEASTERN '30&nbsp;&nbsp;/&nbsp;&nbsp;CS + BUSINESS</p>
+    </section>
+
+    <!-- 3D ring gallery -->
+    <section class="gallery" id="gallery">
+      <div class="gallery-pin" id="galleryPin">
+        <h2 class="gallery-h" aria-label="The highlight reel">The highlight reel</h2>
+        <div class="ring-stage">
+          <div class="ring" id="ring">
+            <figure class="ring-card" data-title="Sneaker Resale" data-line="$10K+ flipped, sourced, and shipped">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192001_454e3beb-ea2f-422e-b838-72501712910a_min.webp" alt="Sneaker resale">
+            </figure>
+            <figure class="ring-card" data-title="Bus Buddy" data-line="React Native bus tracking, Congressional App Challenge">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192003_4eceab85-a5f1-4a7e-9905-fe6dee966bab_min.webp" alt="Bus Buddy">
+            </figure>
+            <figure class="ring-card" data-title="NASA TechRise" data-line="Flight experiment, lunar regolith vs URF insulation">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192004_af14fc6b-5c47-43dc-a171-18ba5c25d953_min.webp" alt="NASA TechRise">
+            </figure>
+            <figure class="ring-card" data-title="PicoCTF" data-line="Top 18 national, two straight years">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192005_79e5b456-6b9b-4c66-8bf1-5c1b64c71665_min.webp" alt="PicoCTF">
+            </figure>
+            <figure class="ring-card" data-title="Steadform" data-line="Healthcare AI agent, concept to live demo">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192152_6af5d3e0-1582-4591-81be-12a8906d77d7_min.webp" alt="Steadform AI agent">
+            </figure>
+            <figure class="ring-card" data-title="Nyxion" data-line="Personas, dashboards, and investor decks">
+              <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_192153_3b10b93c-c46c-47b8-b806-799464f7574a_min.webp" alt="Nyxion dashboards">
+            </figure>
+          </div>
+        </div>
+        <div class="ring-caption">
+          <h3 id="ringTitle">Sneaker Resale</h3>
+          <p class="mono" id="ringLine">$10K+ FLIPPED, SOURCED, AND SHIPPED</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <figure class="about-photo" id="photoCard">
+            <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/e4670171-4c05-4c76-b6b8-2f7917828a13.png" alt="Sidharth Gadikota">
+            <figcaption class="mono">CLASS OF 2026</figcaption>
+          </figure>
+        </div>
+        <div class="about-copy">
+          <h2 class="section-h reveal">The scouting report</h2>
+          <p class="reveal">I'm Sid. I just finished the Computer Science Academy at Morris County School of Technology, and I start at Northeastern this fall: computer science and business administration on the co-op track, pointed at AI and product. Four internships in, I've taken a healthcare AI agent from proof of concept to a live demo, built RAG pipelines with LangChain, and turned survey data into go-to-market decks.</p>
+          <p class="reveal">Off the keyboard: four years of basketball, two on varsity, captain my senior year. Still hooping.</p>
+          <ul class="stat-strip mono" aria-label="Quick stats">
+            <li><b>04</b><i>internships</i></li>
+            <li><b>Top 18</b><i>PicoCTF, two years</i></li>
+            <li><b>260+</b><i>volunteer hours</i></li>
+            <li><b>'30</b><i>Northeastern, CS + Business</i></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Education Section -->
-  <section class="education-section" id="education">
-    <div class="education-container">
-      <h2 class="education-title">Education</h2>
-      <div class="education-timeline-wrapper">
-        <div class="education-timeline">
-          <!-- Elementary School -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-school">Northvail Elementary School</h3>
-              <div class="timeline-years">2013 - 2019</div>
-              <p class="timeline-description">Built strong foundations in mathematics, reading, and early technology exposure.</p>
-            </div>
-            <div class="timeline-year-marker"></div>
+    <!-- Experience -->
+    <section class="seasons" id="experience">
+      <div class="seasons-inner">
+        <h2 class="section-h reveal">Season log</h2>
+        <div class="timeline">
+          <div class="timeline-rail" aria-hidden="true"><span id="railFill"></span></div>
+
+          <article class="t-item reveal">
+            <p class="t-years mono">APR 2026 - PRESENT</p>
+            <h3>AI Solutions Developer Intern, Steadform</h3>
+            <p>Building an AI customer service agent for healthcare: LLM-driven conversation flows for patient and member questions, with the guardrails healthcare demands. Took it from proof of concept to a live, web-embedded chat and voice demo.</p>
+          </article>
+
+          <article class="t-item reveal">
+            <p class="t-years mono">MAY 2026 - PRESENT</p>
+            <h3>Lead Web Developer Intern, Bhakti Yoga Club</h3>
+            <p>Own the site end to end: design, development, and deployment. Built a retreat registration system wired to Google Sheets and online payments.</p>
+          </article>
+
+          <article class="t-item reveal">
+            <p class="t-years mono">AUG 2025 - DEC 2025</p>
+            <h3>AI &amp; Tech Intern, Nyxion</h3>
+            <p>Global Impact Analytics Fellowship. Validated 10 to 15 client personas from surveys, interviews, and 100+ CRM contacts. Shipped dashboards in Python, Power BI, and Figma, plus client and investor pitch decks.</p>
+          </article>
+
+          <article class="t-item reveal">
+            <p class="t-years mono">JUN 2025 - JUL 2025</p>
+            <h3>AI Research &amp; Development Intern, IPMD</h3>
+            <p>Worked on EchoAI, an emotionally aware AI system: RAG pipelines with LangChain, prompt engineering, and labeled emotion video datasets. Weekly demos, final chatbot showcase.</p>
+          </article>
+
+          <article class="t-item reveal">
+            <p class="t-years mono">MAR 2023 - NOV 2023</p>
+            <h3>Code Sensei, Code Ninjas</h3>
+            <p>Taught block-based coding and ran Minecraft STEM activities for young students.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="edu" id="education">
+      <div class="edu-inner">
+        <h2 class="section-h reveal">Education</h2>
+
+        <article class="edu-row reveal">
+          <div>
+            <h3>Northeastern University</h3>
+            <p>B.S., Computer Science &amp; Business Administration. Co-op program, focused on AI and product development. Coursework begins fall 2026.</p>
           </div>
-          <!-- Middle School -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-school">Central Middle School</h3>
-              <div class="timeline-years">2019 - 2022</div>
-              <p class="timeline-description">Advanced coursework in mathematics, science, and computer literacy.</p>
-              <ul class="timeline-achievements">
-                <li>Honor Roll Student</li>
+          <p class="mono edu-years">BOSTON, MA / EXPECTED 2030</p>
+        </article>
+
+        <article class="edu-row reveal">
+          <div>
+            <h3>Morris County School of Technology</h3>
+            <p>Academy for Computer Science. Software development, AI, cybersecurity, and data science.</p>
+          </div>
+          <p class="mono edu-years">DENVILLE, NJ / 2022-2026</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="toolkit" id="toolkit">
+      <h2 class="section-h reveal toolkit-h">The toolkit</h2>
+      <div class="tool-rows">
+        <div class="tool-row" tabindex="0">
+          <div class="tool-head">
+            <h3>Programming</h3>
+            <span class="tool-hint mono">01</span>
+          </div>
+          <div class="tool-body">
+            <div class="tool-body-inner">
+              <p>The daily drivers, from notebooks to production pushes.</p>
+              <ul class="chip-list">
+                <li>Python</li><li>JavaScript</li><li>HTML / CSS</li><li>React Native</li><li>Jupyter</li><li>Git</li>
               </ul>
             </div>
-            <div class="timeline-year-marker"></div>
           </div>
-          <!-- High School -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3 class="timeline-school">Morris County School of Technology</h3>
-              <div class="timeline-program">Computer Science Academy (2022 - 2026)</div>
-              <p class="timeline-description">Focused on software development, AI, cybersecurity, and data science fundamentals.</p>
-              <ul class="timeline-achievements">
-                <li>GPA: 4.1 Weighted</li>
-                <li>Varsity Basketball</li>
-                <li>National Honor Society Member</li>
-                <li>SkillsUSA National Qualifier</li>
+        </div>
+
+        <div class="tool-row" tabindex="0">
+          <div class="tool-head">
+            <h3>AI &amp; ML</h3>
+            <span class="tool-hint mono">02</span>
+          </div>
+          <div class="tool-body">
+            <div class="tool-body-inner">
+              <p>Agents that talk to people: retrieval, prompts, and guardrails.</p>
+              <ul class="chip-list">
+                <li>LLM integration</li><li>LangChain</li><li>RAG</li><li>NLP</li><li>Prompt engineering</li><li>Conversational AI</li>
               </ul>
             </div>
-            <div class="timeline-year-marker"></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  
-  <!---------------------------------------------------------------------------->
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <div class="skills-container">
-      <!-- Timeline years -->
-      <div class="skills-timeline-years">
-       
-       
-          <div class="skills-title">Skills</div>
-          
-        </div>
-        
-      </div>
-
-      <!-- Skills Grid -->
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-header">
-            <div class="skill-icon">💻</div>
-            <h3 class="skill-heading">Programming</h3>
+        <div class="tool-row" tabindex="0">
+          <div class="tool-head">
+            <h3>Product &amp; Data</h3>
+            <span class="tool-hint mono">03</span>
           </div>
-          <ul class="skill-list">
-            <li>Java</li>
-            <li>Python</li>
-            <li>C++</li>
-            <li>HTML, CSS, JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-header">
-            <div class="skill-icon">🤖</div>
-            <h3 class="skill-heading">AI / ML</h3>
-          </div>
-          <ul class="skill-list">
-            <li>Data Analysis</li>
-            <li>Model Building</li>
-            <li>APIs & Integrations</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-header">
-            <div class="skill-icon">🛡️</div>
-            <h3 class="skill-heading">Cybersecurity</h3>
-          </div>
-          <ul class="skill-list">
-            <li>Kali Linux Tools (Wireshark, Okteta, ExifTool, Binwalk)</li>
-            <li>CTF Competitions (PicoCTF)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-<!---------------------------------------------------------------------------->
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <h2 class="section-title">Projects</h2>
-
-    <div class="project-card">
-      <h3>Sneaker Reselling Business</h3>
-      <p class="project-role">Founder | 2022 – Present</p>
-      <ul class="project-details">
-        <li>Built and managed a sneaker reselling business, generating over $10,000+.</li>
-        <li>Researched market trends and sneaker release calendars to maximize profitability.</li>
-        <li>Handled sourcing, pricing, customer communication, and independent sales operations.</li>
-        <li>Maintained basic tracking systems for inventory and profit analysis.</li>
-      </ul>
-    </div>
-
-    <div class="project-card">
-      <h3>Bus Buddy — App Concept</h3>
-      <p class="project-role">Lead Designer | Congressional App Challenge Submission | 2024</p>
-      <ul class="project-details">
-        <li>Designed a mobile app prototype to help students track real-time school bus locations.</li>
-        <li>Developed feature outlines focusing on live GPS tracking, push notifications, and schedule integration.</li>
-        <li>Created conceptual mockups to demonstrate user flow and app functionality.</li>
-        <li>Submitted as an official entry for the Congressional App Challenge to showcase technical innovation.</li>
-      </ul>
-    </div>
-
-    <div class="project-card">
-      <h3>KickTrak — Sneaker Analytics Platform (In Progress)</h3>
-      <p class="project-role">Founder | 2025</p>
-      <ul class="project-details">
-        <li>Building a sneaker analytics web platform to track pricing trends, restock alerts, and market demand.</li>
-        <li>Focused on delivering a modern UI/UX experience with real-time data visualization.</li>
-        <li>Utilizing HTML, CSS, JavaScript, with plans for backend integration for dynamic data updates.</li>
-      </ul>
-    </div>
-  
-  </section>
-
-  
-  <!-- Awards and Extracirriculars -->
-  <section class="awards-section">
-    <div class="container">
-      <h2 class="awards-title">Awards & Volunteer Work</h2>
-      <div class="awards-grid">
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-award"></i></div>
-          <h3 class="award-title">Presidential Volunteer Service Award</h3>
-          <p class="award-desc">Recognized for over 150 hours of impactful service, including community organization and leadership.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-hands-helping"></i></div>
-          <h3 class="award-title">Monthly Donation Facilitator</h3>
-          <p class="award-desc">Coordinated recurring electronics and canned food drives, handling logistics and delivery to nonprofits.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-dumbbell"></i></div>
-          <h3 class="award-title">Basketball Coaching Volunteer</h3>
-          <p class="award-desc">Completed 50+ hours coaching youth basketball, mentoring players and assisting with drills and team management.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-basketball-ball"></i></div>
-          <h3 class="award-title">Varsity Basketball Player</h3>
-          <p class="award-desc">Played competitive basketball for four years, including two years on varsity and serving as senior year captain.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-place-of-worship"></i></div>
-          <h3 class="award-title">Sai Temple Volunteer</h3>
-          <p class="award-desc">Contributed 60+ hours leading donation sorting, transport coordination, and setup during temple relocation efforts.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-code"></i></div>
-          <h3 class="award-title">Congressional App Challenge</h3>
-          <p class="award-desc">Received formal recognition from Rep. Mikie Sherrill for innovative app development in the 2024 Congressional App Challenge.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-medal"></i></div>
-          <h3 class="award-title">SkillsUSA Gold Medalist</h3>
-          <p class="award-desc">Earned Gold Medal at the NJ State SkillsUSA competition, qualifying for Nationals in 2025.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3 class="award-title">PicoCTF Cybersecurity Challenge</h3>
-          <p class="award-desc">Participated twice in PicoCTF; placed Top 18 out of 100+ teams nationally during the second competition.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-laptop-code"></i></div>
-          <h3 class="award-title">Code Sensei | Code Ninjas, Parsippany, NJ</h3>
-          <p class="award-desc">Taught block coding to young students and led Minecraft STEM activities from March to November 2023.</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-rocket"></i></div>
-          <h3 class="award-title">NASA TechRise Challenge Participant</h3>
-          <p class="award-desc">Designed an experiment comparing lunar regolith and URF insulation for thermal protection in space missions (Oct 2024).</p>
-        </div>
-
-        <div class="award-card">
-          <div class="award-icon"><i class="fas fa-user-graduate"></i></div>
-          <h3 class="award-title">Student Council Representative</h3>
-          <p class="award-desc">Served as a class representative; helped organize fundraisers and increase funding for school initiatives.</p>
-        </div>
-
-        <div class="award-card">
-  <div class="award-icon"><i class="fas fa-python"></i></div>
-  <h3 class="award-title">Python Workshop Leader</h3>
-  <p class="award-desc">Led an interactive Python workshop for middle school students during the MCST Hackathon, introducing coding fundamentals and hands-on problem-solving.</p>
-</div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact Me</h2>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-details">
-              <h3>Location</h3>
-              <p>Parsippany, New Jersey</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <a href="mailto:youremail@example.com">Siddgadikota@gmail.com</a>
+          <div class="tool-body">
+            <div class="tool-body-inner">
+              <p>From raw survey data to dashboards and decks people act on.</p>
+              <ul class="chip-list">
+                <li>Power BI</li><li>Figma</li><li>Survey design</li><li>Persona research</li><li>Dashboarding</li><li>Go-to-market analysis</li>
+              </ul>
             </div>
           </div>
         </div>
-        <form action="https://formspree.io/f/your-valid-form-id" method="POST" class="contact-form">
-          <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer style="padding: 40px 0; text-align: center; background: var(--background-dark); color: var(--text-color); font-size: 0.9rem;">
-    <div class="container">
-      &copy; 2025 Sidharth Gadikota. All rights reserved.
+    <!-- Projects -->
+    <section class="work" id="work">
+      <div class="work-inner">
+        <h2 class="section-h reveal">Selected work</h2>
+
+        <article class="work-row reveal">
+          <span class="work-num mono">01</span>
+          <div class="work-main">
+            <h3>Bus Buddy</h3>
+            <p>React Native app that helps kids track their school bus on a live map, built on a real-time map API. Official Congressional App Challenge entry, recognized by Rep. Mikie Sherrill.</p>
+          </div>
+          <div class="work-side">
+            <p class="mono">REACT NATIVE, 2024</p>
+          </div>
+        </article>
+
+        <article class="work-row reveal">
+          <span class="work-num mono">02</span>
+          <div class="work-main">
+            <h3>NASA TechRise Experiment</h3>
+            <p>Designed a flight experiment comparing lunar regolith and URF insulation for thermal protection in space missions.</p>
+          </div>
+          <div class="work-side">
+            <p class="mono">FLIGHT EXPERIMENT, 2024</p>
+          </div>
+        </article>
+
+        <article class="work-row reveal">
+          <span class="work-num mono">03</span>
+          <div class="work-main">
+            <h3>Retreat Registration Platform</h3>
+            <p>Multi-page responsive site for Bhakti Yoga Club with a registration system integrated with Google Sheets and online payment processing.</p>
+          </div>
+          <div class="work-side">
+            <p class="mono">HTML / CSS / JS, 2026</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Record -->
+    <section class="record" id="record">
+      <div class="record-inner">
+        <div class="record-head">
+          <h2 class="section-h reveal">The record</h2>
+          <span class="record-count" aria-hidden="true">06</span>
+        </div>
+
+        <ol class="ledger">
+          <li class="reveal"><h3>PicoCTF, Top 18 National</h3><p>Placed top 18 two consecutive years in the national cybersecurity CTF.</p></li>
+          <li class="reveal"><h3>SkillsUSA National Qualifier</h3><p>Web design. Gold at the NJ state competition, qualified for Nationals.</p></li>
+          <li class="reveal"><h3>Congressional App Challenge</h3><p>Official entry with Bus Buddy, recognized by Rep. Mikie Sherrill.</p></li>
+          <li class="reveal"><h3>NASA TechRise Challenge</h3><p>Flight experiment design for thermal protection in space missions.</p></li>
+          <li class="reveal"><h3>Lead, Sewa International</h3><p>200+ hours across donation drives, outreach, and disaster relief logistics, 2022 to 2024.</p></li>
+          <li class="reveal"><h3>Team Lead, I LOVE SAI</h3><p>Led a volunteer team through a temple relocation, 60+ hours of coordination.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="contact-plate" aria-hidden="true"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3BiS3B9OBDyt1gXHGY2fqUohZsI/hf_20260704_185441_bfdd403c-91a8-49b7-af0d-0547458bb960_min.webp" alt="" loading="lazy"></div>
+      <div class="contact-inner">
+        <h2 class="contact-h reveal">Let's build.</h2>
+        <a class="contact-mail" id="mailLink" href="mailto:sidgadikota26@gmail.com">sidgadikota26@gmail.com</a>
+        <div class="contact-row">
+          <button class="copy-btn" id="copyBtn" type="button">Copy email</button>
+          <a class="contact-linkedin" href="https://www.linkedin.com/in/sidharth-gadikota-b8259a292" target="_blank" rel="noopener">LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="mono contact-alt">(862) 220-3004&nbsp;&nbsp;/&nbsp;&nbsp;PARSIPPANY, NJ</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="mono">&copy; 2026 SIDHARTH GADIKOTA</p>
+    <div class="footer-links">
+      <a class="mono" href="https://github.com/Sidlmao" target="_blank" rel="noopener">GITHUB</a>
+      <a class="mono" href="https://www.linkedin.com/in/sidharth-gadikota-b8259a292" target="_blank" rel="noopener">LINKEDIN</a>
     </div>
   </footer>
-
-
 
 </body>
 </html>
